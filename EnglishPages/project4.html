@@ -139,7 +139,7 @@
             display: block;
             overflow: hidden;
             transition: transform 0.3s, border 0.3s;
-            width: calc(25% - 40px); /* 25% width minus margins */
+            width: calc(25% - 40px);
         }
 
         .gallery img {
@@ -304,9 +304,9 @@
 
         // Loop around
         if (currentImage < 1) {
-            currentImage = totalImages; // Go to last image
+            currentImage = totalImages;
         } else if (currentImage > totalImages) {
-            currentImage = 1; // Go to first image
+            currentImage = 1;
         }
 
         window.location.href = '#img' + currentImage;
