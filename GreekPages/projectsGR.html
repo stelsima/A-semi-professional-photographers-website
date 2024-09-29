@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Stella Manioudaki</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #010101;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            background: #13252E;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .go-back-button {
+            background: #13252E;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background 0.3s, transform 0.3s;
+            margin-right: -145px;
+        }
+
+        .go-back-button:hover {
+            background: #555;
+            transform: scale(1.05);
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            margin-left: 164px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 10px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: #fff;
+            color: #13252E;
+            border-radius: 5px;
+        }
+
+        .social-buttons, .language-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .social-buttons a, .language-buttons a {
+            color: #fff;
+            background: #13252E;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+
+        .social-buttons a:hover, .language-buttons a:hover {
+            background: #555;
+        }
+
+        .language-buttons a img {
+            width: 24px;
+            height: 16px;
+        }
+
+        .language-buttons {
+            margin-right: 10px;
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .content h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 24px;
+        }
+
+        .projects-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .project-item {
+            background: #1f2a31;
+            border-radius: 10px;
+            margin: 20px;
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            text-align: left;
+        }
+
+        .project-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+        }
+
+        .project-content p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .project-item a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .project-item:hover {
+            transform: scale(1.05);
+        }
+        .go-back-button {
+            background: #13252E;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .go-back-button:hover {
+            background: #555;
+            transform: scale(1.05);
+        }
+
+        /* Adjust logo margin to prevent overlap */
+        .nav-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="nav-content">
+        <a href="javascript:history.back()" class="go-back-button">Επιστροφή</a>
+        <div class="logo">Στέλλα Μανιουδάκη</div>
+    </div>    
+    <ul class="nav-links">
+        <li><a href="../GreekPages/mainMenuGR.html">Κεντρική Οθόνη</a></li>
+        <li><a href="../GreekPages/projectsGR.html">Εργασίες</a></li>
+        <li><a href="../GreekPages/exhibitionsGR.html">Εκθέσεις</a></li>
+        <li><a href="../GreekPages/newsGR.html">Νέα</a></li>
+        <li><a href="../GreekPages/aboutMeGR.html">Σχετικά</a></li>
+    </ul>
+    <div class="language-buttons">
+        <a href="../EnglishPages/projects.html" title="English"><img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="English"></a>
+        <a href="../GreekPages/projectsGR.html" title="Greek"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg" alt="Greek"></a>
+    </div>
+    <div class="social-buttons">
+        <a href="https://www.facebook.com/stella.manioudaki.16" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/stella_manioudaki" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:stelmanphoto@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+</nav>
+<div class="content">
+    <h1>Εργασίες</h1>
+    <div class="projects-wrapper">
+        <div class="project-item">
+            <a href="../GreekPages/project1GR.html">
+                <img src="../img/1_naus/pic1.JPG" alt="Project 1">
+                <div class="project-content">
+                    <h2>Ναῦς</h2>
+                    <p>“Για το Μαδράς, τη Σιγγαπούρ, τ’ Αλγέρι και το Σφαξ
+                        θ’ αναχωρούν σαν πάντοτε περήφανα τα πλοία,
+                        κι εγώ, σκυφτός σ’ ένα γραφείο με χάρτες ναυτικούς,
+                        θα κάνω αθροίσεις σε χοντρά λογιστικά βιβλία.”
+                        Νικος Καββαδίας Ποίημα: Mal du depart
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="../GreekPages/project2GR.html">
+                <img src="../img/2_showcase%20show/pic1.jpg" alt="Project 2">
+                <div class="project-content">
+                    <h2>Σόου με βιτρίνες</h2>
+                    <p>«Σαν να μην ήρθαμε ποτέ σ' αυτήν εδώ τη γη,
+                        σα να μένουμε ακόμα στην ανυπαρξία.
+                        Σκοτάδι γύρω κι ούτε μια μαρμαρυγή.
+                        Άνθρωποι στων άλλων μόνο τη φαντασία...»
+                        Κ.Γ. Καρυωτάκη Ποίημα: «Ανδρείκελα»
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="../GreekPages/project3GR.html">
+                <img src="../img/3_Dark%20stories/pic2.jpg" alt="Project 3">
+                <div class="project-content">
+                    <h2>Σκοτεινές ιστορίες</h2>
+                    <p>Πούθ’ έρχεσαι; Απ’ τη Βαβυλώνα.
+                        Πού πας; Στο μάτι του κυκλώνα.
+                        Ποιαν αγαπάς; Κάποια τσιγγάνα.
+                        Πώς τη λένε; Φάτα Μοργκάνα.
+                        Νικος Καββαδίας :Ποίημα: Fata Morgana
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="../GreekPages/project4GR.html">
+                <img src="../img/4_short%20stories/pic1.jpg" alt="Project 4">
+                <div class="project-content">
+                    <h2>Μικρές ιστορίες</h2>
+                    <p>«…Τόσος κόσμος πού πηγαίνει; Τι συμβαίνει, τι συμβαίνει, τι;
+                        Μάχη; Πόλεμος; Ειρήνη; Τι θα γίνει, τι θα γίνει, τι;
+                        Όλοι κι όλα μοιάζουν ένα, σαν εσένα σαν εμένα
+                        στης ζωής την πιο τρελή γιορτή…»
+                        Νίκος Γκάτσος: "Reflections"
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="../GreekPages/project5GR.html">
+                <img src="../img/5_Ink%20stories/pic1.jpg" alt="Project 5">
+                <div class="project-content">
+                    <h2>Ιστορίες με μελάνι</h2>
+                    <p>«Μικρό παιδί σαν ήμουνα και πήγαινα σχολείο,
+                        Στα μάτια είχα τη χαρά, στα χέρια το βιβλίο,
+                        Όταν η βαρυχειμωνιά μου πάγωνε τα χέρια,
+                        στον ουρανό τα σήκωνα, να ζεσταθούν στ’ αστέρια….»
+
+                        Στίχοι: Λίνος Kόκοτος  ,  Αργύρης Βεργόπουλος
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="../GreekPages/project6GR.html">
+                <img src="../img/6_Medousa/pic1.jpg" alt="Project 6">
+                <div class="project-content">
+                    <h2>Μέδουσα</h2>
+                    <p>Μέδουσα, το πλάσμα που προκαλεί δέος,  θαυμασμό μαζί με φόβο,  που την φώναζαν Γοργώ, (δηλαδή «άγρια ματιά»),  που πέτρωνε όσους την αντίκρυζαν.  Η Μέδουσα του μύθου με τον Περσέα, η Μέδουσα των θρύλων,  και των αντιφάσεων….</p>
+                </div>
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="../GreekPages/project7GR.html">
+                <img src="../img/7_Ninemia/pic1.jpg" alt="Project 7">
+                <div class="project-content">
+                    <h2>Νηνεμία</h2>
+                    <p>Σσσσσσς….</p>
+                </div>
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="../GreekPages/project8GR.html">
+                <img src="../img/8_illusion/pic1.jpg" alt="Project 8">
+                <div class="project-content">
+                    <h2>Παραισθήσεις</h2>
+                    <p>«Λατρεύτηκε κανείς εδώ; Υπήρχε κάποιος; ή πέρασε απλώς ο χρόνος και άφησε την ομορφιά του;»
+                        Ποίηση Μαρία Λαϊνά
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="../GreekPages/project9GR.html">
+                <img src="../img/9_The%20game%20of%20Zoe/pic1.jpg" alt="Project 9">
+                <div class="project-content">
+                    <h2>Το παιχνίδι της Ζωής</h2>
+                    <p>Οι φωτογραφίες προέκυψαν με αφορμή την ανάγνωση του βιβλίου της Άλκης Ζέη «Με μολύβι φάμπερ νούμερο δύο»</p>
+                </div>
+            </a>
+        </div>
+        <!-- Add more projects as needed -->
+    </div>
+</div>
+</body>
+</html>

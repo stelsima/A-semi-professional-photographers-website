@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stella Manioudaki</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #010101;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            background: #13252E;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .go-back-button {
+            background: #13252E;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background 0.3s, transform 0.3s;
+            margin-right: 74px;
+        }
+
+        .go-back-button:hover {
+            background: #555;
+            transform: scale(1.05);
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            margin-left: 0;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 10px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: #fff;
+            color: #13252E;
+            border-radius: 5px;
+        }
+
+        .social-buttons, .language-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .social-buttons a, .language-buttons a {
+            color: #fff;
+            background: #13252E;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+
+        .social-buttons a:hover, .language-buttons a:hover {
+            background: #555;
+        }
+
+        .language-buttons a img {
+            width: 24px;
+            height: 16px;
+        }
+
+        .language-buttons {
+            margin-right: 10px;
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        .content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .img-medusa {
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="nav-content">
+        <a href="javascript:history.back()" class="go-back-button">Go Back</a>
+        <div class="logo">Stella Manioudaki</div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="../EnglishPages/mainMenu.html">Home</a></li>
+        <li><a href="../EnglishPages/projects.html">Projects</a></li>
+        <li><a href="../EnglishPages/exhibitions.html">Exhibitions</a></li>
+        <li><a href="../EnglishPages/news.html">News</a></li>
+        <li><a href="../EnglishPages/aboutMe.html">About</a></li>
+    </ul>
+    <div class="language-buttons">
+        <a href="../EnglishPages/mainMenu.html" title="English"><img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="English"></a>
+        <a href="../GreekPages/mainMenuGR.html" title="Greek"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg" alt="Greek"></a>
+    </div>
+    <div class="social-buttons">
+        <a href="https://www.facebook.com/stella.manioudaki.16" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/stella_manioudaki" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:stelmanphoto@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+</nav>
+<div class="wrapper">
+    <h1>Welcome</h1>
+    <img class="img-medusa" src="../img/medusa.jpg" alt="the medusa">
+</div>
+</body>
+</html>

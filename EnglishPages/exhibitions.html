@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exhibitions - Stella Manioudaki</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #010101;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      background: #13252E;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      position: relative;
+    }
+
+    .nav-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .go-back-button {
+      background: #13252E;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background 0.3s, transform 0.3s;
+      margin-right: -90px;
+    }
+
+    .go-back-button:hover {
+      background: #555;
+      transform: scale(1.05);
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      margin-left: 164px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav-links li {
+      margin: 0 15px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 5px 10px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .nav-links a:hover {
+      background: #fff;
+      color: #13252E;
+      border-radius: 5px;
+    }
+
+    .social-buttons, .language-buttons {
+      display: flex;
+      align-items: center;
+    }
+
+    .social-buttons a, .language-buttons a {
+      color: #fff;
+      background: #13252E;
+      padding: 10px 15px;
+      margin: 0 5px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+
+    .social-buttons a:hover, .language-buttons a:hover {
+      background: #555;
+    }
+
+    .language-buttons a img {
+      width: 24px;
+      height: 16px;
+    }
+
+    .language-buttons {
+      margin-right: 10px;
+    }
+
+    .content {
+      text-align: center;
+      margin-top: 20px;
+      padding: 20px;
+    }
+
+    .content h1 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .exhibitions-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .exhibition-item {
+      background: #1f2a31;
+      border-radius: 10px;
+      margin: 20px 0;
+      width: 90%;
+      padding: 20px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-start; /* Align items to the top */
+      transition: transform 0.3s;
+      position: relative;
+      height: 400px; /* Set a fixed height for the wrapper */
+      cursor: pointer; /* Make the wrapper clickable */
+    }
+
+    .exhibition-content {
+      flex: 1;
+      padding-right: 20px;
+      text-align: left; /* Align text to the left */
+    }
+
+    .exhibition-content h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+    }
+
+    .exhibition-content p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .exhibition-content time, .exhibition-content .place,  .exhibition-content .curation{
+      display: block;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .exhibition-item img {
+      width: auto;
+      height: 100%; /* Make the image as tall as the wrapper */
+      border-radius: 5px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .exhibition-item:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-content">
+    <a href="javascript:history.back()" class="go-back-button">Go Back</a>
+    <div class="logo">Stella Manioudaki</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="../EnglishPages/mainMenu.html">Home</a></li>
+    <li><a href="../EnglishPages/projects.html">Projects</a></li>
+    <li><a href="../EnglishPages/exhibitions.html">Exhibitions</a></li>
+    <li><a href="../EnglishPages/news.html">News</a></li>
+    <li><a href="../EnglishPages/aboutMe.html">About</a></li>
+</ul>
+  <div class="language-buttons">
+    <a href="../EnglishPages/exhibitions.html" title="English"><img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="English"></a>
+    <a href="../GreekPages/exhibitionsGR.html" title="Greek"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg" alt="Greek"></a>
+  </div>
+  <div class="social-buttons">
+    <a href="https://www.facebook.com/stella.manioudaki.16" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/stella_manioudaki" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="mailto:stelmanphoto@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+  </div>
+</nav>
+<div class="content">
+  <h1>Exhibitions</h1>
+  <div class="exhibitions-wrapper">
+    <div class="exhibition-item" onclick="openImage(this)">
+      <div class="exhibition-content">
+        <h2>7th Chania International Photo festival, </h2>
+        <time datetime="2024-07-22-26">Duration: July 22-26, 2024</time>
+        <span class="place">Location: Grant Arsenal, Chania, Greece</span>
+      </div>
+      <img src="../img/medusa.jpg" alt="Photo from Exhibition 1">
+    </div>
+    <div class="exhibition-item" onclick="openImage(this)">
+      <div class="exhibition-content">
+        <h2>Group exhibition by employees of the Ministry of Maritime Affairs & I.P.</h2>
+        <time datetime="2024-06-3-7">Duration: June 3-7, 2024</time>
+        <span class="place">Location: patio of Ministry of Maritime Affairs & I.P, Piraeus, Greece</span>
+        <p>Exhibition theme: The sea</p>
+      </div>
+      <img src="../img/6_Medousa/pic2.jpg" alt="Photo from Exhibition 2">
+    </div>
+    <div class="exhibition-item" onclick="openImage(this)">
+      <div class="exhibition-content">
+        <h2>Corinth Exposed Photography Festival</h2>
+        <time datetime="2024-9">Duration: September, 2024</time>
+        <span class="place">Location: Archaeological Museum of Ancient Corinth, Corinth, Greece</span>
+        <p>A group exhibition as part of the International Festival of Corinth 2023</p>
+        <p>by the Corinth Photographic Club and photologio.gr</p>
+      </div>
+      <img src="../img/9_The game of Zoe/pic4.jpg" alt="Photo from Exhibition 3">
+    </div>
+    <div class="exhibition-item" onclick="openImage(this)">
+      <div class="exhibition-content">
+        <h2>6th Chania International Photo festival </h2>
+        <time datetime="2023-8-3-9">Duration: August 3-9, 2023</time>
+        <span class="place">Location: Grant Arsenal and Mikis Theodorakis theater, Chania, Greece</span>
+        <p>Short description of Exhibition 1. This exhibition showcases...</p>
+      </div>
+      <img src="../img/7_Ninemia/pic6.jpg" alt="Photo from Exhibition 3">
+    </div>
+    <div class="exhibition-item" onclick="openImage(this)">
+      <div class="exhibition-content">
+        <h2>Group photo exhibition "Epirus Landscape"</h2>
+        <time datetime="2023-6-10-1">Duration: June 10 - July 1, 2023</time>
+        <span class="place">Location: Photometria Photography Center (PPC), Ioannina, Greece</span>
+        <p>Short description of Exhibition 1. This exhibition showcases...</p>
+      </div>
+      <img src="../img/7_Ninemia/pic6.jpg" alt="Photo from Exhibition 4">
+    </div>
+    <div class="exhibition-item" onclick="openImage(this)">
+      <div class="exhibition-content">
+        <h2>"The power of the image"</h2>
+        <time datetime="2023-6-10-1">Duration: July 15-30, 2022</time>
+        <span class="place">Location: Grant Arsenal, Chania, Greece</span>
+        <p>Group exhibition for the Museum of Typography</p>
+        <p>Organization: Museum of Typography of Chania & newspaper Chaniotika Nea</p>
+      </div>
+      <img src="../img/5_Ink stories/pic3.jpg" alt="Photo from Exhibition 5">
+    </div>
+    <div class="exhibition-item" onclick="openImage(this)">
+      <div class="exhibition-content">
+        <h2>"Edible-One photo, a thousand flavors"</h2>
+        <time datetime="2021-6-2-5">Duration: June 2-5, 2021</time>
+        <span class="place">Location: Piraeus Art Gallery, Piraeus, Greece</span>
+        <p>Short description of Exhibition 1. This exhibition showcases...</p>
+      </div>
+      <img src="../img/exhibitions/pic3.jpg" alt="Photo from Exhibition 6">
+    </div>
+    <div class="exhibition-item" onclick="openImage(this)">
+      <div class="exhibition-content">
+        <h2>Group exhibition by graduates of the Department of Photography of D.I.E.K. Chania </h2>
+        <time datetime="2021-7-29-4">Duration: July 29 - August 4, 2021</time>
+        <span class="place">Location: Hammam on Katre Street, Chania, Greece</span>
+        <p>Short description of Exhibition 1. This exhibition showcases...</p>
+      </div>
+      <img src="../img/exhibitions/pic2.jpg" alt="Photo from Exhibition 7">
+    </div>
+    <div class="exhibition-item" onclick="openImage(this)">
+      <div class="exhibition-content">
+        <h2>Group exhibition on Landscapes</h2>
+        <time datetime="2021-7-29-4">Duration: August 28 - September 8, 2021</time>
+        <span class="place">Location: Blank & Wall Gallery, Athens, Greece</span>
+        <p>Short description of Exhibition 1. This exhibition showcases...</p>
+      </div>
+      <img src="../img/exhibitions/pic1.jpg" alt="Photo from Exhibition 8">
+    </div>
+    <!-- Add more exhibitions as needed -->
+  </div>
+</div>
+
+<script>
+  function openImage(element) {
+    const img = element.querySelector('img');
+    if (img) {
+      window.open(img.src, '_blank');
+    }
+  }
+</script>
+</body>
+</html>

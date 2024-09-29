@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="gr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Στέλλα Μανιουδάκη</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #010101;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            background: #13252E;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: relative;
+        }
+        .nav-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .go-back-button {
+            background: #13252E;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background 0.3s, transform 0.3s;
+            margin-right: -125px;
+        }
+
+        .go-back-button:hover {
+            background: #555;
+            transform: scale(1.05);
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            margin-left: 164px; /* Move the logo 5px to the right */
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            flex: 1;
+            justify-content: center; /* Center the links horizontally */
+        }
+
+        .nav-links li {
+            margin: 0 15px; /* Adjust spacing between links */
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 10px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: #fff;
+            color: #13252E;
+            border-radius: 5px;
+        }
+
+        .social-buttons, .language-buttons {
+            display: flex;
+            align-items: center; /* Align items vertically */
+        }
+
+        .social-buttons a, .language-buttons a {
+            color: #fff;
+            background: #13252E;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+
+        .social-buttons a:hover, .language-buttons a:hover {
+            background: #555;
+        }
+
+        .language-buttons a img {
+            width: 24px;
+            height: 16px;
+        }
+
+        .language-buttons {
+            margin-right: 10px; /* Space between language and social buttons */
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        .content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 24px;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .img-medusa {
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="nav-content">
+        <a href="javascript:history.back()" class="go-back-button">Επιστροφή</a>
+        <div class="logo">Στέλλα Μανιουδάκη</div>
+    </div>    
+    <ul class="nav-links">
+        <li><a href="../GreekPages/mainMenuGR.html">Κεντρική Οθόνη</a></li>
+        <li><a href="../GreekPages/projectsGR.html">Εργασίες</a></li>
+        <li><a href="../GreekPages/exhibitionsGR.html">Εκθέσεις</a></li>
+        <li><a href="../GreekPages/newsGR.html">Νέα</a></li>
+        <li><a href="../GreekPages/aboutMeGR.html">Σχετικά</a></li>
+    </ul>
+    <div class="language-buttons">
+        <a href="../EnglishPages/mainMenu.html" title="English"><img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="English"></a>
+        <a href="../GreekPages/mainMenuGR.html" title="Greek"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg" alt="Greek"></a>
+    </div>
+    <div class="social-buttons">
+        <a href="https://www.facebook.com/stella.manioudaki.16" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/stella_manioudaki" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:stelmanphoto@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+</nav>
+<div class="wrapper">
+    <h1>Καλώς ήλθατε</h1>
+    <img class="img-medusa" src="../img/medusa.jpg" alt="the medusa">
+</div>
+</body>
+</html>

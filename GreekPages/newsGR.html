@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Νέα - Στέλλα Μανιουδάκη</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #010101;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            background: #13252E;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: relative;
+        }
+        .nav-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .go-back-button {
+            background: #13252E;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background 0.3s, transform 0.3s;
+            margin-right: -125px;
+        }
+
+        .go-back-button:hover {
+            background: #555;
+            transform: scale(1.05);
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            margin-left: 164px; /* Move the logo 5px to the right */
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            flex: 1;
+            justify-content: center; /* Center the links horizontally */
+        }
+
+        .nav-links li {
+            margin: 0 15px; /* Adjust spacing between links */
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 10px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: #fff;
+            color: #13252E;
+            border-radius: 5px;
+        }
+
+        .social-buttons, .language-buttons {
+            display: flex;
+            align-items: center; /* Align items vertically */
+        }
+
+        .social-buttons a, .language-buttons a {
+            color: #fff;
+            background: #13252E;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+
+        .social-buttons a:hover, .language-buttons a:hover {
+            background: #555;
+        }
+
+        .language-buttons a img {
+            width: 24px;
+            height: 16px;
+        }
+
+        .language-buttons {
+            margin-right: 10px; /* Space between language and social buttons */
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .content h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 24px;
+        }
+
+        .news-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .news-article {
+            background: #1f2a31;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px 0;
+            width: 100%;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .news-article h2 {
+            margin-top: 0;
+            font-size: 32px;
+        }
+
+        .news-article p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .news-article time {
+            display: block;
+            font-size: 14px;
+            color: #bbb;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="nav-content">
+        <a href="javascript:history.back()" class="go-back-button">Επιστροφή</a>
+        <div class="logo">Στέλλα Μανιουδάκη</div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="../GreekPages/mainMenuGR.html">Κεντρική Οθόνη</a></li>
+        <li><a href="../GreekPages/projectsGR.html">Εργασίες</a></li>
+        <li><a href="../GreekPages/exhibitionsGR.html">Εκθέσεις</a></li>
+        <li><a href="../GreekPages/newsGR.html">Νέα</a></li>
+        <li><a href="../GreekPages/aboutMeGR.html">Σχετικά</a></li>
+    </ul>
+    <div class="language-buttons">
+        <a href="../EnglishPages/news.html" title="English"><img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="English"></a>
+        <a href="../GreekPages/newsGR.html" title="Greek"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg" alt="Greek"></a>
+    </div>
+    <div class="social-buttons">
+        <a href="https://www.facebook.com/stella.manioudaki.16" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/stella_manioudaki" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:stelmanphoto@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+</nav>
+<div class="content">
+    <h1>Νέα</h1>
+    <div class="news-wrapper">
+        <article class="news-article">
+            <time datetime="2024-08-24">24 Αυγούστου, 2024</time>
+            <h2>Συμμετοχή σε νέα έκθεση</h2>
+            <p>Είμαι στην ευχάριστη θέση να ανακοινώσω τη συμμετοχή μου σε μια νέα ομαδική έκθεση του ΦΩΤΟgalleries από το PHOTOVISION ART. Η έκθεση θα βρίσκεται στο Ζάππειο Μέγαρο απο τις 11 εως 13 Οκτωβρίου.</p>
+        </article>
+        <article class="news-article">
+            <time datetime="2024-08-24">24 Αυγούστου, 2024</time>
+            <h2>Δημοσίευση της Ιστοσελίδας μου</h2>
+            <p>Ανακοινώνω τη νέα μου ιστοσελίδα η οποία δημοσιεύεται σήμερα 23 Αυγούστου του 2024.</p>
+        </article>
+        <!-- Add more articles here as needed -->
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Εκθέσεις - Στέλλα Μανιουδάκη</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #010101;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      background: #13252E;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      position: relative;
+    }
+    .nav-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .go-back-button {
+      background: #13252E;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background 0.3s, transform 0.3s;
+      margin-right: -125px;
+    }
+
+    .go-back-button:hover {
+      background: #555;
+      transform: scale(1.05);
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      margin-left: 164px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav-links li {
+      margin: 0 15px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 5px 10px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .nav-links a:hover {
+      background: #fff;
+      color: #13252E;
+      border-radius: 5px;
+    }
+
+    .social-buttons, .language-buttons {
+      display: flex;
+      align-items: center;
+    }
+
+    .social-buttons a, .language-buttons a {
+      color: #fff;
+      background: #13252E;
+      padding: 10px 15px;
+      margin: 0 5px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+
+    .social-buttons a:hover, .language-buttons a:hover {
+      background: #555;
+    }
+
+    .language-buttons a img {
+      width: 24px;
+      height: 16px;
+    }
+
+    .language-buttons {
+      margin-right: 10px;
+    }
+
+    .content {
+      text-align: center;
+      margin-top: 20px;
+      padding: 20px;
+    }
+
+    .content h1 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .exhibitions-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .exhibition-item {
+      background: #1f2a31;
+      border-radius: 10px;
+      margin: 20px 0;
+      width: 90%;
+      padding: 20px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-start; /* Align items to the top */
+      transition: transform 0.3s;
+      position: relative;
+      height: 400px; /* Set a fixed height for the wrapper */
+      cursor: pointer; /* Make the wrapper clickable */
+    }
+
+    .exhibition-content {
+      flex: 1;
+      padding-right: 20px;
+      text-align: left; /* Align text to the left */
+    }
+
+    .exhibition-content h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+    }
+
+    .exhibition-content p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .exhibition-content time, .exhibition-content .place,  .exhibition-content .curation{
+      display: block;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .exhibition-item img {
+      width: auto;
+      height: 100%; /* Make the image as tall as the wrapper */
+      border-radius: 5px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .exhibition-item:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-content">
+    <a href="javascript:history.back()" class="go-back-button">Επιστροφή</a>
+    <div class="logo">Στέλλα Μανιουδάκη</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="../GreekPages/mainMenuGR.html">Κεντρική Οθόνη</a></li>
+    <li><a href="../GreekPages/projectsGR.html">Εργασίες</a></li>
+    <li><a href="../GreekPages/exhibitionsGR.html">Εκθέσεις</a></li>
+    <li><a href="../GreekPages/newsGR.html">Νέα</a></li>
+    <li><a href="../GreekPages/aboutMeGR.html">Σχετικά</a></li>
+</ul>
+  <div class="language-buttons">
+    <a href="../EnglishPages/exhibitions.html" title="English"><img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="English"></a>
+    <a href="../GreekPages/exhibitionsGR.html" title="Greek"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg" alt="Greek"></a>
+  </div>
+  <div class="social-buttons">
+    <a href="https://www.facebook.com/stella.manioudaki.16" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/stella_manioudaki" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="mailto:stelmanphoto@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+  </div>
+</nav>
+<div class="content">
+  <h1>Εκθέσεις</h1>
+  <div class="exhibitions-wrapper">
+    <div class="exhibition-item" onclick="openImage(this)">
+      <div class="exhibition-content">
+        <h2>7ο Διεθνές Φεστιβάλ Φωτογραφίας Χανίων </h2>
+        <time datetime="2024-07-22-26">Διάρκεια: 22 - 26 Ιουλίου 2024</time>
+        <span class="place">Τοποθεσία: Μεγάλο Αρσενάλι (ΚΑΜ), Χανιά, Ελλάδα</span>
+      </div>
+      <img src="../img/medusa.jpg" alt="Photo from Exhibition 1">
+    </div>
+    <div class="exhibition-item" onclick="openImage(this)">
+      <div class="exhibition-content">
+        <h2>Ομαδική έκθεση εικαστικών έργων υπαλλήλων του Υ.Ναυτιλίας &Ν.Π</h2>
+        <time datetime="2024-06-3-7">Διάρκεια: 3-7 Ιουνίου 2024</time>
+        <span class="place">Τοποθεσία: αίθριο ΥΝ&ΝΠ, Πειραιάς, Ελλάδα</span>
+        <p>Θέμα έκθεσης: Η θάλασσα</p>
+      </div>
+      <img src="../img/6_Medousa/pic2.jpg" alt="Photo from Exhibition 2">
+    </div>
+    <div class="exhibition-item" onclick="openImage(this)">
+      <div class="exhibition-content">
+        <h2>Corinth Exposed Photography Festival</h2>
+        <time datetime="2024-9">Διάρκεια: Σεπτέμβριος, 2024</time>
+        <span class="place">Τοποθεσία: Αρχαιολογικό Μουσείο Αρχαίας Κορίνθου, Κόρινθος, Ελλάδα</span>
+        <p>Επρόκειτο για ομαδική έκθεση στο πλαίσιο του Διεθνούς Φεστιβάλ Κορινθίας 2023 από τη</p>
+        <p>Φωτογραφική Λέσχη Κορίνθου και το photologio.gr</p>
+      </div>
+      <img src="../img/9_The game of Zoe/pic4.jpg" alt="Photo from Exhibition 3">
+    </div>
+    <div class="exhibition-item" onclick="openImage(this)">
+      <div class="exhibition-content">
+        <h2>6ο Διεθνές Φεστιβάλ Φωτογραφίας Χανίων </h2>
+        <time datetime="2023-8-3-9">Διάρκεια: 3-9 Αυγούστου, 2023</time>
+        <span class="place">Τοποθεσία: ΚΑΜ και Θέατρο Μίκης Θεοδωράκης, Χανιά, Ελλάδα</span>
+      </div>
+      <img src="../img/7_Ninemia/pic6.jpg" alt="Photo from Exhibition 3">
+    </div>
+    <div class="exhibition-item" onclick="openImage(this)">
+      <div class="exhibition-content">
+        <h2>Ομαδική έκθεση φωτογραφίας «Ηπειρώτικο Τοπίο»</h2>
+        <time datetime="2023-6-10-1">Διάρκεια: 10 Ιουνίου - 1 Ιουλίου, 2023</time>
+        <span class="place">Τοποθεσία: Photometria Photography Center (PPC), Ιωάννινα, Ελλάδα</span>
+      </div>
+      <img src="../img/7_Ninemia/pic6.jpg" alt="Photo from Exhibition 3">
+    </div>
+    <div class="exhibition-item" onclick="openImage(this)">
+      <div class="exhibition-content">
+        <h2>«Η δύναμη της εικόνας»</h2>
+        <time datetime="2023-6-10-1">Διάρκεια: 15-30 Ιουλίου, 2022</time>
+        <span class="place">Τοποθεσία: Κέντρο Αρχιτεκτονικής Μεσογείου, Χανιά, Ελλάδα</span>
+        <p>Ομαδική έκθεση για το Μουσείο Τυπογραφίας </p>
+        <p>Διοργάνωση: Μουσειο Τυπογραφίας Χανίων & Εφ. Χανιώτικα Νέα</p>
+      </div>
+      <img src="../img/5_Ink stories/pic3.jpg" alt="Photo from Exhibition 3">
+    </div>
+    <div class="exhibition-item" onclick="openImage(this)">
+      <div class="exhibition-content">
+        <h2>«Εδώδιμα-Μια Φωτογραφία, Χίλιες Γεύσεις»</h2>
+        <time datetime="2021-6-2-5">Διάρκεια: 2-5 Ιουνίου, 2021</time>
+        <span class="place">Τοποθεσία: Πινακοθήκη Πειραιά, Πειραιάς, Ελλάδα</span>
+      </div>
+      <img src="../img/exhibitions/pic3.jpg" alt="Photo from Exhibition 3">
+    </div>
+    <div class="exhibition-item" onclick="openImage(this)">
+      <div class="exhibition-content">
+        <h2>Ομαδική έκθεση έργων αποφοίτων του τμήματος Φωτογραφίας Δ.Ι.Ε.Κ. Χανίων </h2>
+        <time datetime="2021-7-29-4">Διάρκεια: 29 Ιουλίου - 4 Αυγούστου, 2021</time>
+        <span class="place">Τοποθεσία: Χαμάμ στην οδό Κατρέ, Χανιά, Ελλάδα</span>
+      </div>
+      <img src="../img/exhibitions/pic2.jpg" alt="Photo from Exhibition 3">
+    </div>
+    <div class="exhibition-item" onclick="openImage(this)">
+      <div class="exhibition-content">
+        <h2>Ομαδική έκθεση με θέμα Landscapes</h2>
+        <time datetime="2021-7-29-4">Διάρκεια: 28 Αυγούστου - 8 Σεπτεμβρίου, 2021</time>
+        <span class="place">Τοποθεσία: Γκαλερύ Blank & Wall, Αθήνα, Ελλάδα</span>
+      </div>
+      <img src="../img/exhibitions/pic1.jpg" alt="Photo from Exhibition 3">
+    </div>
+    <!-- Add more exhibitions as needed -->
+  </div>
+</div>
+
+<script>
+  function openImage(element) {
+    const img = element.querySelector('img');
+    if (img) {
+      window.open(img.src, '_blank');
+    }
+  }
+</script>
+</body>
+</html>
