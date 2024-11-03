@@ -27,31 +27,20 @@
             position: relative;
         }
 
-        .nav-content {
-            display: flex;
-            align-items: center;
-        }
-
-        .go-back-button {
-            background: #13252E;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 18px;
-            transition: background 0.3s, transform 0.3s;
-            margin-right: 74px;
-        }
-
-        .go-back-button:hover {
-            background: #555;
-            transform: scale(1.05);
-        }
-
-        .logo {
+        .logo-button {
             font-size: 26px;
             font-weight: bold;
-            margin-left: 0;
+            color: #fff;
+            text-decoration: none;
+            background: #13252E;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .logo-button:hover {
+            background: #555;
+            transform: scale(1.05);
         }
 
         .nav-links {
@@ -140,12 +129,8 @@
 </head>
 <body>
 <nav>
-    <div class="nav-content">
-        <a href="javascript:history.back()" class="go-back-button">Go Back</a>
-        <div class="logo">Stella Manioudaki</div>
-    </div>
+    <a href="../EnglishPages/mainMenu.html" class="logo-button">Stella Manioudaki</a>
     <ul class="nav-links">
-        <li><a href="../EnglishPages/mainMenu.html">Home</a></li>
         <li><a href="../EnglishPages/projects.html">Projects</a></li>
         <li><a href="../EnglishPages/exhibitions.html">Exhibitions</a></li>
         <li><a href="../EnglishPages/news.html">News</a></li>

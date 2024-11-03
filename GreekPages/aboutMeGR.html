@@ -26,31 +26,10 @@
             padding: 10px 20px;
             position: relative;
         }
+
         .nav-content {
             display: flex;
             align-items: center;
-        }
-
-        .go-back-button {
-            background: #13252E;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 18px;
-            transition: background 0.3s, transform 0.3s;
-            margin-right: -125px;
-        }
-
-        .go-back-button:hover {
-            background: #555;
-            transform: scale(1.05);
-        }
-
-        .logo {
-            font-size: 26px;
-            font-weight: bold;
-            margin-left: 164px;
         }
 
         .nav-links {
@@ -59,11 +38,11 @@
             margin: 0;
             padding: 0;
             flex: 1;
-            justify-content: center;
+            justify-content: center; /* Center the links horizontally */
         }
 
         .nav-links li {
-            margin: 0 15px;
+            margin: 0 15px; /* Adjust spacing between links */
         }
 
         .nav-links a {
@@ -82,7 +61,7 @@
 
         .social-buttons, .language-buttons {
             display: flex;
-            align-items: center;
+            align-items: center; /* Align items vertically */
         }
 
         .social-buttons a, .language-buttons a {
@@ -106,7 +85,7 @@
         }
 
         .language-buttons {
-            margin-right: 10px;
+            margin-right: 10px; /* Space between language and social buttons */
         }
 
         .container {
@@ -120,7 +99,7 @@
 
         .about-content {
             display: flex;
-            align-items: flex-start;
+            align-items: flex-start; /* Align image with the top of the text */
             justify-content: space-between;
             flex-wrap: wrap;
         }
@@ -129,13 +108,13 @@
             max-width: 20%;
             height: auto;
             border-radius: 10px;
-            margin-right: 20px;
-            margin-left: 40px;
+            margin-right: 20px; /* Add margin to the right to separate from text */
+            margin-left: -85px; /* Adjust this value to match the image centering */
         }
 
         .about-text {
             max-width: 70%;
-            margin: 0;
+            margin: 0; /* Remove the top margin to align with the image */
         }
 
         .about-text h2 {
@@ -148,16 +127,27 @@
             line-height: 1.6;
             color: #ccc;
         }
+        .logo-button {
+            font-size: 26px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            background: #13252E;
+            padding: 10px 50px;
+            border-radius: 10px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .logo-button:hover {
+            background: #555;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
 <nav>
-    <div class="nav-content">
-        <a href="javascript:history.back()" class="go-back-button">Επιστροφή</a>
-        <div class="logo">Στέλλα Μανιουδάκη</div>
-    </div>    
+    <a href="../GreekPages/mainMenuGR.html" class="logo-button">Στέλλα Μανιουδάκη</a>
     <ul class="nav-links">
-        <li><a href="../GreekPages/mainMenuGR.html">Κεντρική Οθόνη</a></li>
         <li><a href="../GreekPages/projectsGR.html">Εργασίες</a></li>
         <li><a href="../GreekPages/exhibitionsGR.html">Εκθέσεις</a></li>
         <li><a href="../GreekPages/newsGR.html">Νέα</a></li>

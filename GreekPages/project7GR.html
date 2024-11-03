@@ -27,28 +27,6 @@
             position: relative;
         }
 
-        .go-back-button {
-            background: #13252E;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 18px;
-            transition: background 0.3s, transform 0.3s;
-            margin-right: -145px;
-        }
-
-        .go-back-button:hover {
-            background: #555;
-            transform: scale(1.05);
-        }
-
-        .logo {
-            font-size: 26px;
-            font-weight: bold;
-            margin-left: 164px;
-        }
-
         .nav-links {
             list-style: none;
             display: flex;
@@ -134,7 +112,7 @@
             display: block;
             overflow: hidden;
             transition: transform 0.3s, border 0.3s;
-            width: calc(25% - 40px);
+            width: calc(25% - 40px); /* 25% width minus margins */
         }
 
         .gallery img {
@@ -199,36 +177,34 @@
         .overlay .next {
             right: 20px;
         }
-        .go-back-button {
-            background: #13252E;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 18px;
-            transition: background 0.3s, transform 0.3s;
-        }
 
-        .go-back-button:hover {
-            background: #555;
-            transform: scale(1.05);
-        }
-
+        /* Adjust logo margin to prevent overlap */
         .nav-content {
             display: flex;
             align-items: center;
             gap: 20px;
         }
+        .logo-button {
+            font-size: 26px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            background: #13252E;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .logo-button:hover {
+            background: #555;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
 <nav>
-    <div class="nav-content">
-        <a href="javascript:history.back()" class="go-back-button">Επιστροφή</a>
-        <div class="logo">Στέλλα Μανιουδάκη</div>
-    </div>    
+    <a href="../GreekPages/mainMenuGR.html" class="logo-button">Στέλλα Μανιουδάκη</a>
     <ul class="nav-links">
-        <li><a href="../GreekPages/mainMenuGR.html">Κεντρική Οθόνη</a></li>
         <li><a href="../GreekPages/projectsGR.html">Εργασίες</a></li>
         <li><a href="../GreekPages/exhibitionsGR.html">Εκθέσεις</a></li>
         <li><a href="../GreekPages/newsGR.html">Νέα</a></li>
@@ -340,9 +316,9 @@
 
         // Loop around
         if (currentImage < 1) {
-            currentImage = totalImages;
+            currentImage = totalImages; // Go to last image
         } else if (currentImage > totalImages) {
-            currentImage = 1;
+            currentImage = 1; // Go to first image
         }
 
         window.location.href = '#img' + currentImage;

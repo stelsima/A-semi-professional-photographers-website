@@ -32,28 +32,6 @@
             align-items: center;
         }
 
-        .go-back-button {
-            background: #13252E;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 18px;
-            transition: background 0.3s, transform 0.3s;
-            margin-right: -125px;
-        }
-
-        .go-back-button:hover {
-            background: #555;
-            transform: scale(1.05);
-        }
-
-        .logo {
-            font-size: 26px;
-            font-weight: bold;
-            margin-left: 164px;
-        }
-
         .nav-links {
             list-style: none;
             display: flex;
@@ -139,7 +117,7 @@
             display: block;
             overflow: hidden;
             transition: transform 0.3s, border 0.3s;
-            width: calc(25% - 40px);
+            width: calc(25% - 40px); /* 25% width minus margins */
         }
 
         .gallery img {
@@ -204,16 +182,27 @@
         .overlay .next {
             right: 20px;
         }
+        .logo-button {
+            font-size: 26px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            background: #13252E;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .logo-button:hover {
+            background: #555;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
 <nav>
-    <div class="nav-content">
-        <a href="javascript:history.back()" class="go-back-button">Go Back</a>
-        <div class="logo">Stella Manioudaki</div>
-    </div>    
+    <a href="../EnglishPages/mainMenu.html" class="logo-button">Stella Manioudaki</a>
     <ul class="nav-links">
-        <li><a href="../EnglishPages/mainMenu.html">Home</a></li>
         <li><a href="../EnglishPages/projects.html">Projects</a></li>
         <li><a href="../EnglishPages/exhibitions.html">Exhibitions</a></li>
         <li><a href="../EnglishPages/news.html">News</a></li>
@@ -233,7 +222,7 @@
     <h1>Showcase show</h1>
     <div class="gallery">
         <a href="#img1"><img src="../img/2_showcase%20show/pic1.jpg" alt="Image 1"></a>
-        <a href="#img2"><img src="../img/2_showcase%20show/pic2.jpg" alt="Image 2"></a>
+        <a href="#img2"><img src="../img/2_showcase%20show/pic2.JPG" alt="Image 2"></a>
         <a href="#img3"><img src="../img/2_showcase%20show/pic3.jpg" alt="Image 3"></a>
         <a href="#img4"><img src="../img/2_showcase%20show/pic4.jpg" alt="Image 4"></a>
         <a href="#img5"><img src="../img/2_showcase%20show/pic5.jpg" alt="Image 5"></a>
@@ -242,7 +231,7 @@
         <a href="#img8"><img src="../img/2_showcase%20show/pic8.jpg" alt="Image 8"></a>
         <a href="#img9"><img src="../img/2_showcase%20show/pic9.jpg" alt="Image 9"></a>
         <a href="#img10"><img src="../img/2_showcase%20show/pic10.jpg" alt="Image 10"></a>
-        <a href="#img11"><img src="../img/2_showcase%20show/pic11.jpg" alt="Image 11"></a>
+        <a href="#img11"><img src="../img/2_showcase%20show/pic11.JPG" alt="Image 11"></a>
         <a href="#img12"><img src="../img/2_showcase%20show/pic12.jpg" alt="Image 12"></a>
         <a href="#img13"><img src="../img/2_showcase%20show/pic13.jpg" alt="Image 13"></a>
         <a href="#img14"><img src="../img/2_showcase%20show/pic14.jpg" alt="Image 14"></a>
@@ -259,7 +248,7 @@
 <div id="img2" class="overlay">
     <a href="#" class="close-btn" title="Close">&#10006;</a>
     <a href="#" class="nav-arrow prev" onclick="navigate(2, -1, event)">&#10094;</a>
-    <img src="../img/2_showcase%20show/pic2.jpg" alt="Image 2">
+    <img src="../img/2_showcase%20show/pic2.JPG" alt="Image 2">
     <a href="#" class="nav-arrow next" onclick="navigate(2, 1, event)">&#10095;</a>
 </div>
 <div id="img3" class="overlay">
@@ -313,7 +302,7 @@
 <div id="img11" class="overlay">
     <a href="#" class="close-btn" title="Close">&#10006;</a>
     <a href="#" class="nav-arrow prev" onclick="navigate(11, -1, event)">&#10094;</a>
-    <img src="../img/2_showcase%20show/pic11.jpg" alt="Image 11">
+    <img src="../img/2_showcase%20show/pic11.JPG" alt="Image 11">
     <a href="#" class="nav-arrow next" onclick="navigate(11, 1, event)">&#10095;</a>
 </div>
 <div id="img12" class="overlay">
@@ -346,9 +335,9 @@
 
         // Loop around
         if (currentImage < 1) {
-            currentImage = totalImages;
+            currentImage = totalImages; // Go to last image
         } else if (currentImage > totalImages) {
-            currentImage = 1;
+            currentImage = 1; // Go to first image
         }
 
         window.location.href = '#img' + currentImage;

@@ -32,39 +32,17 @@
             align-items: center;
         }
 
-        .go-back-button {
-            background: #13252E;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 18px;
-            transition: background 0.3s, transform 0.3s;
-            margin-right: -90px;
-        }
-
-        .go-back-button:hover {
-            background: #555;
-            transform: scale(1.05);
-        }
-
-        .logo {
-            font-size: 26px;
-            font-weight: bold;
-            margin-left: 164px;
-        }
-
         .nav-links {
             list-style: none;
             display: flex;
             margin: 0;
             padding: 0;
             flex: 1;
-            justify-content: center;
+            justify-content: center; /* Center the links horizontally */
         }
 
         .nav-links li {
-            margin: 0 15px;
+            margin: 0 15px; /* Adjust spacing between links */
         }
 
         .nav-links a {
@@ -83,7 +61,7 @@
 
         .social-buttons, .language-buttons {
             display: flex;
-            align-items: center;
+            align-items: center; /* Align items vertically */
         }
 
         .social-buttons a, .language-buttons a {
@@ -107,7 +85,7 @@
         }
 
         .language-buttons {
-            margin-right: 10px;
+            margin-right: 10px; /* Space between language and social buttons */
         }
 
         .content {
@@ -158,16 +136,27 @@
             color: #bbb;
             margin-bottom: 10px;
         }
+        .logo-button {
+            font-size: 26px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            background: #13252E;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .logo-button:hover {
+            background: #555;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
 <nav>
-    <div class="nav-content">
-        <a href="javascript:history.back()" class="go-back-button">Go Back</a>
-        <div class="logo">Stella Manioudaki</div>
-    </div>    
+    <a href="../EnglishPages/mainMenu.html" class="logo-button">Stella Manioudaki</a>
     <ul class="nav-links">
-        <li><a href="../EnglishPages/mainMenu.html">Home</a></li>
         <li><a href="../EnglishPages/projects.html">Projects</a></li>
         <li><a href="../EnglishPages/exhibitions.html">Exhibitions</a></li>
         <li><a href="../EnglishPages/news.html">News</a></li>
@@ -194,7 +183,7 @@
         <article class="news-article">
             <time datetime="2024-08-24">August 24, 2024</time>
             <h2>Publish of my Website</h2>
-            <p>I am announcing my new website which is published today, August 23, 2024.</p>
+            <p>I am announcing my new website which is published today, August 24, 2024.</p>
         </article>
         <!-- Add more articles here as needed -->
     </div>
