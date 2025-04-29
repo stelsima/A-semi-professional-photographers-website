@@ -151,6 +151,14 @@
             background: #555;
             transform: scale(1.05);
         }
+        .news-article img {
+            display: block; /* Makes the image behave as a block element */
+            margin: 10px auto; /* Centers the image horizontally */
+            height: 400px; /* Fixed height */
+            width: auto; /* Maintains aspect ratio */
+            border-radius: 10px; /* Optional: Add rounded corners */
+            object-fit: cover; /* Ensures proper cropping without distortion */
+        }
     </style>
 </head>
 <body>
@@ -184,6 +192,23 @@
             <time datetime="2024-08-24">August 24, 2024</time>
             <h2>Publish of my Website</h2>
             <p>I am announcing my new website which is published today, August 24, 2024.</p>
+        </article>
+        <article class="news-article">
+            <time datetime="2024-01">January, 2024</time>
+            <h2>Publiced at the Magazine "Φωτογράφος" issue 288 January 2024.</h2>
+            <img class="img-magazine" src="../img/magazine photo.jpg" alt="magazine">
+        </article>
+        <article class="news-article">
+            <time datetime="2024-09-19">October 19 2023</time>
+            <h2>Screening of the movie "Ενθύμηση" at Chania Film Festival.</h2>
+            <p>Screening of the movie "Ενθύμηση" directed by Sofia Kasssari and produced by Citron stories, at Chania Film Festival, inspired by my photographic travelogue in the Metohia of Chania...</p>
+            <img class="img-enthMag" src="../img/enthimisiMag.jpg" alt="enthMag">
+        </article>
+        <article class="news-article">
+            <time datetime="2024-09-19">August 28 2021</time>
+            <h2>First screening of the movie "Ενθύμηση" inspired by my photographic travelogue in the Metohia of Chania....</h2>
+            <p>The first screening of the movie "Ενθύμηση" directed by Sofia Kasssari and produced by Citron stories, in the outdoor area of the Olive Oil Mill in the Metochi of Agios Eleftherios in Mournies on my photographic journey to the Metochia of Chania, through the program "Open Sails of the Municipality of Chania.</p>
+            <img class="img-enthShow" src="../img/enthShow.jpg" alt="enthShow">
         </article>
         <!-- Add more articles here as needed -->
     </div>

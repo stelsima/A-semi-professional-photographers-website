@@ -150,6 +150,15 @@
             background: #555;
             transform: scale(1.05);
         }
+
+        .news-article img {
+            display: block; /* Makes the image behave as a block element */
+            margin: 10px auto; /* Centers the image horizontally */
+            height: 400px; /* Fixed height */
+            width: auto; /* Maintains aspect ratio */
+            border-radius: 10px; /* Optional: Add rounded corners */
+            object-fit: cover; /* Ensures proper cropping without distortion */
+        }
     </style>
 </head>
 <body>
@@ -183,6 +192,23 @@
             <time datetime="2024-08-24">24 Αυγούστου, 2024</time>
             <h2>Δημοσίευση της Ιστοσελίδας μου</h2>
             <p>Ανακοινώνω τη νέα μου ιστοσελίδα η οποία δημοσιεύεται σήμερα 24 Αυγούστου του 2024.</p>
+        </article>
+        <article class="news-article">
+            <time datetime="2024-01">Ιανουάριος, 2024</time>
+            <h2>Δημοσίευση στο Περιοδικό "Φωτογράφος" τεύχος 288 Ιανουαρίου 2024.</h2>
+            <img class="img-magazine" src="../img/magazine photo.jpg" alt="magazine">
+        </article>
+        <article class="news-article">
+            <time datetime="2024-09-19">19 Οκτωβρίου 2023</time>
+            <h2>Προβολή ταινίας "Ενθύμηση" στο Chania Film Festival.</h2>
+            <p>Προβολή της ταινίας "Ενθύμηση" σε σκηνοθεσία της Σοφίας Κάσσαρη και παραγωγής Citron stories, στο Chania Film Festival, με θέμα το φωτογραφικό μου οδοιπορικό στα Μετόχια των Χανίων...</p>
+            <img class="img-enthMag" src="../img/enthimisiMag.jpg" alt="enthMag">
+        </article>
+        <article class="news-article">
+            <time datetime="2024-09-19">28 Αυγούστου 2021</time>
+            <h2>Πρώτη προβολή ταινίας "Ενθύμηση" με θέμα το φωτογραφικό μου οδοιπορικό στα Μετόχια των Χανίων.</h2>
+            <p>Η πρώτη προβολή της ταινίας "Ενθύμηση" της Σοφίας Κάσσαρη και παραγωγής Citron stories, στο υπαίθριο Χώρο του Ελαιουργείου στο Μετόχι Αγ.Ελευθερίου στις Μουρνιές με θέμα το φωτογραφικό μου οδοιπορικό στα Μετόχια των Χανίων, μέσα από το πρόγραμμα "Ανοιχτά Πανιά του Δήμου Χανίων.</p>
+            <img class="img-enthShow" src="../img/enthShow.jpg" alt="enthShow">
         </article>
         <!-- Add more articles here as needed -->
     </div>
